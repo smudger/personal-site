@@ -1,4 +1,7 @@
 ---
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+
 const title = 'About Me';
 ---
 
@@ -11,10 +14,10 @@ const title = 'About Me';
 		<title>{title}</title>
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+        <Navigation />
         
 		<h1>{title}</h1>
+
+        <Footer />
 	</body>
 </html>
