@@ -16,7 +16,12 @@ const { Content } = await post.render();
             <header>
                 <h1>{post.data.title}</h1>
                 <p><em>{post.data.description}</em></p>
-                <p>Published on: {post.data.pubDate.toString().slice(0,10)}</p>
+                <p>
+                    Published on: 
+                    <time datetime={post.data.pubDate.toISOString()}>
+                        {post.data.pubDate.toLocaleDateString(undefined, {dateStyle: 'medium'})}
+                    </time>
+                </p>
                 <p>Written by {post.data.author}</p>
                 <img src={post.data.image.url} width="300" alt={post.data.image.alt} />
                 <ul>
